@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: If you use these artifacts, please cite the paper below.
+title: Towards Multidisciplinary Citance Analysis Artifacts
+type: software
+version: 1.0.0
+repository-code: https://github.com/pantelakisg/multidisciplinary-citance-analysis
+authors:
+  - family-names: Pantelakis
+    given-names: Georgios
+  - family-names: Stavropoulos
+    given-names: Petros
+  - family-names: Papageorgiou
+    given-names: Haris
+preferred-citation:
+  type: article
+  title: "Towards Multidisciplinary Citance Analysis: A Novel Approach for Intent, Polarity, and Semantics Classification"
+  year: 2026
+  authors:
+    - family-names: Pantelakis
+      given-names: Georgios
+    - family-names: Stavropoulos
+      given-names: Petros
+    - family-names: Papageorgiou
+      given-names: Haris

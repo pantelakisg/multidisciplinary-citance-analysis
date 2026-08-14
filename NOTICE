@@ -1,0 +1,19 @@
+Original CitAn application code, dataset annotations, documentation, and
+fine-tuning contributions are Copyright (c) 2026 the authors of "Towards
+Multidisciplinary Citance Analysis: A Novel Approach for Intent, Polarity, and
+Semantics Classification."
+
+The original application and packaging source is licensed under the MIT
+License. The original CitAn dataset annotations and project documentation are
+licensed under CC BY 4.0. See the consolidated LICENSE file for all scopes and
+terms.
+
+This repository contains a fine-tuned adapter derived from Llama 3.1.
+
+Llama 3.1 is licensed under the Llama 3.1 Community License,
+Copyright (c) Meta Platforms, Inc. All Rights Reserved.
+
+Built with Llama.
+
+The SciBERT-MT model uses SciBERT, developed by the Allen Institute for AI (AI2).
+SciBERT is distributed under the Apache License 2.0.

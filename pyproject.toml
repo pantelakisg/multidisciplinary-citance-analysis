@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "citan-ui"
+version = "1.0.0"
+description = "Local inference UI for the CitAn Llama 3.1-FT and SciBERT-MT models"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+  { name = "Georgios Pantelakis" },
+  { name = "Petros Stavropoulos" },
+  { name = "Haris Papageorgiou" },
+]
+keywords = ["citation analysis", "citance classification", "natural language processing"]
+dependencies = [
+  "accelerate>=1.12,<2",
+  "bitsandbytes>=0.48,<1",
+  "peft>=0.18,<1",
+  "safetensors>=0.6,<1",
+  "torch>=2.9,<3",
+  "transformers>=4.57,<5",
+]
+
+[project.scripts]
+citan-ui = "citan_ui.main:main"
+
+[project.urls]
+Repository = "https://github.com/pantelakisg/multidisciplinary-citance-analysis"
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cu130", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.setuptools.package-data]
+citan_ui = ["frontend/*.html", "frontend/*.css", "frontend/*.js"]

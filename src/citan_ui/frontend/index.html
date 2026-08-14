@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Local CitAn inference with Llama 3.1-FT and SciBERT-MT.">
+  <title>CitAn · Multidisciplinary Citance Analysis</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">CitAn research artifacts</div>
+    <h1>Towards Multidisciplinary Citance Analysis</h1>
+    <p class="lead">
+      Classify a scientific citance across <strong>Semantics</strong>,
+      <strong>Intent</strong>, and <strong>Polarity</strong> using the paper's
+      Llama 3.1-FT and SciBERT-MT models.
+    </p>
+
+    <section class="workspace">
+      <div class="panel">
+        <label for="citance">Citance</label>
+        <textarea id="citance" spellcheck="true" placeholder="Enter one citance containing exactly one &lt;CIT&gt; marker."></textarea>
+        <div class="examples">
+          <button id="example" class="example" type="button">Example citance</button>
+        </div>
+        <div class="row">
+          <div>
+            <label for="model">Model</label>
+            <select id="model">
+              <option value="scibert">SciBERT-MT · fast</option>
+              <option value="llama">Llama 3.1-FT · GPU</option>
+              <option value="both">Compare both</option>
+            </select>
+          </div>
+          <button id="analyze">Analyze citance</button>
+        </div>
+      </div>
+
+      <aside class="panel guide">
+        <h2>Mark the target</h2>
+        <ol class="steps">
+          <li>Paste one citance sentence or a short context window.</li>
+          <li>Replace the citation being classified—such as <em>[12]</em> or <em>(Smith, 2024)</em>—with exactly one <code>&lt;CIT&gt;</code>.</li>
+          <li>Leave any other, non-target citation markers unchanged.</li>
+        </ol>
+        <div class="privacy">
+          Inference runs locally. SciBERT is self-contained; Llama downloads
+          its 4-bit base model on first use unless a local base path is configured.
+        </div>
+      </aside>
+    </section>
+
+    <section class="panel results" aria-live="polite">
+      <h2>Classification</h2>
+      <div id="status" class="status">Ready.</div>
+      <div id="cards" class="cards"></div>
+    </section>
+
+    <footer>
+      Research prototype · Built with Llama · Treat predictions as model outputs,
+      not definitive scholarly judgments.
+    </footer>
+  </main>
+</body>
+</html>

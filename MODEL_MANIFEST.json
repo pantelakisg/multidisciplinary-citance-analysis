@@ -1,0 +1,19 @@
+{
+  "citation_marker": "<CIT>",
+  "models": {
+    "llama-3.1-ft": {
+      "artifact": "weights/llama-3.1-ft/adapter_model.safetensors",
+      "base_model": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
+      "format": "PEFT LoRA safetensors",
+      "size_bytes": 2143365056,
+      "sha256": "378d5c041a4319775a0dad46cc9a9e9dbb62172cf1dd5af2d05fb78b2579245c"
+    },
+    "scibert-mt": {
+      "artifact": "weights/scibert-mt/model_weights.pth",
+      "base_model": "allenai/scibert_scivocab_cased",
+      "format": "PyTorch state dictionary",
+      "size_bytes": 440438455,
+      "sha256": "28b5b8f49528ff8c369a28666fb0d2c7ec020e2e74520b20138d4e3ae1369b5d"
+    }
+  }
+}
